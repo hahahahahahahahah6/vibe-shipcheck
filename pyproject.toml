@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vibe-shipcheck"
+version = "0.1.0"
+description = "Pre-publish security config check for vibe-coded apps: committed .env files, hardcoded secrets, exposed Supabase URLs, missing RLS, wildcard CORS, debug flags."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hao li" }]
+keywords = ["security", "vibe-coding", "supabase", "pre-publish", "ci", "checklist"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/vibe-shipcheck"
+Repository = "https://github.com/hahahahahahahahah6/vibe-shipcheck"
+
+[project.scripts]
+vibe-shipcheck = "vibe_shipcheck:main"
+
+[tool.setuptools.packages.find]
+include = ["vibe_shipcheck*"]
